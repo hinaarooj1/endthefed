@@ -1,0 +1,1594 @@
+/*
+Theme Name: My Custom Theme
+Theme URI: http://example.com
+Author: Your Name
+Author URI: http://example.com
+Description: A custom theme built from HTML
+Version: 1.0
+*/
+
+/* Font Import */
+@import url('https://fonts.cdnfonts.com/css/rubik-distressed');
+
+/* Apply Rubik Distressed to All Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rubik Distressed', Arial, sans-serif;
+    /* Use Rubik Distressed with fallback */
+    letter-spacing: 0.05em;
+    /* Adjust spacing for better readability */
+    text-transform: uppercase;
+    /* Optional: Make text uppercase for style */
+    margin: 0;
+    /* Reset margins for consistency */
+    line-height: 1.2;
+    /* Adjust line height for better readability */
+}
+
+/* Specific Styling for Debt Title */
+.debt-title {
+    font-family: 'Rubik Distressed', Arial, sans-serif;
+    /* Ensure font applies to this specific heading */
+    color: #ff0000;
+    /* Optional: Add color for emphasis */
+    text-align: center;
+    /* Align title to the center */
+}
+
+/* Apply Rubik Distressed Globally */
+body,
+p,
+span,
+li,
+a,
+button,
+input {
+    font-family: 'Rubik Distressed', Arial, sans-serif;
+    /* Apply Rubik Distressed globally */
+    margin: 0;
+    /* Reset default margins */
+    padding: 0;
+    /* Reset default padding */
+    line-height: 1.5;
+    /* Set consistent line height */
+    color: #fff;
+    /* Default text color */
+}
+
+/* Apply Rubik Distressed to Navbar Links */
+.navbar .nav-links li a {
+    font-family: 'Rubik Distressed', Arial, sans-serif !important;
+    /* Apply Rubik Distressed font to nav links */
+    display: inline-block;
+    padding: 10px 15px;
+    /* Add padding for the box */
+    text-decoration: none;
+    /* Remove underline */
+    color: #fff;
+    /* White text color */
+    font-size: 1.2rem;
+    background: #000;
+    /* Black background for the box */
+    border-radius: 20px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    /* Subtle glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.navbar .nav-links li a:hover {
+    transform: scale(1.1);
+    /* Pop effect */
+    background: #ff0000;
+    /* Change background to red */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    /* Intense red glow on hover */
+    color: #fff;
+    /* Keep text white */
+}
+
+/* Style for Contract Address Title */
+.contract-label {
+    font-family: 'Rubik Distressed', Arial, sans-serif !important;
+    /* Apply Rubik Distressed font */
+    font-size: 1.8rem;
+    /* Adjust size for visibility */
+    color: #ff0000;
+    /* Optional: Red color for emphasis */
+    text-align: center;
+    /* Center align the text */
+    margin-bottom: 15px;
+    /* Add spacing below the title */
+    text-transform: uppercase;
+    /* Optional: Make the text uppercase */
+    letter-spacing: 0.05em;
+    /* Slight spacing for readability */
+}
+
+/* Specific Global Adjustments */
+a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: inherit;
+    /* Inherit color from parent elements */
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: #ff0000;
+    /* Change color on hover */
+}
+
+button,
+input {
+    font-family: inherit;
+    /* Ensure buttons and inputs use the same font */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove focus outline */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: #000000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Space between logo, links, and button */
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    z-index: 1000;
+    background: none;
+    /* No background */
+    box-shadow: none;
+    /* Remove shadow */
+}
+
+.navbar .logo img {
+    height: 60px;
+    /* Slightly larger logo */
+    border-radius: 0;
+    /* No border radius for logo */
+    border: none;
+    /* No border */
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .logo img:hover {
+    transform: rotate(360deg);
+    /* Rotate on hover */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* Space between links */
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+}
+
+.navbar .cta-btn {
+    background: #000;
+    /* Black background for button */
+    color: #fff;
+    /* White text */
+    padding: 10px 20px;
+    border: 2px solid #ff0000;
+    /* Red border for button */
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Bangers', cursive;
+    /* Funky font for button */
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    /* Subtle glow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.navbar .cta-btn:hover {
+    background: #ff0000;
+    /* Red background on hover */
+    color: #fff;
+    /* Keep text white */
+    transform: scale(1.1);
+    /* Pop effect */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    /* Intense red glow on hover */
+}
+
+
+/* Video Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background: #ff0000;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hero .btn:hover {
+    background: #b30000;
+    transform: scale(1.1);
+}
+
+/* Audio Button */
+.audio-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.audio-button i {
+    font-size: 1.5rem;
+}
+
+.audio-button:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+/* Debt Section */
+.debt {
+    padding: 60px 20px;
+    text-align: center;
+    background: #000000;
+}
+
+.debt h2 {
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.debt-info h3 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+/* Other Sections */
+.about,
+.roadmap,
+.community,
+.exchanges {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2,
+.roadmap h2,
+.community h2,
+.exchanges h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.about p {
+    font-size: 1.5rem;
+    /* Increased font size for better readability */
+    line-height: 1.8;
+    /* Adjust line height for better spacing */
+    color: #fff;
+    /* Ensure text color is white for readability */
+    max-width: 800px;
+    /* Limit text width for better layout */
+    margin: 0 auto;
+    /* Center the text */
+    padding: 10px 0;
+    /* Add some vertical padding */
+}
+
+
+.community-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.community-icons a:hover {
+    color: #ff0000;
+}
+
+/* Roadmap Section (Pathway) */
+.roadmap-road {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.roadmap-road .road {
+    font-size: 3rem;
+    color: #ff0000;
+    text-align: center;
+}
+
+.milestone {
+    text-align: center;
+}
+
+.milestone i {
+    font-size: 2.5rem;
+    color: #ff0000;
+}
+
+.milestone p {
+    margin-top: 10px;
+}
+
+/* Features Section */
+.feature-logos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.feature-logo img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+    animation: spin 3s linear infinite;
+}
+
+.feature-logo img:hover {
+    animation: none;
+    transform: scale(1.2);
+}
+
+.feature-logo p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Keyframe for spinning logos */
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+    border-top: 2px solid #ff0000;
+}
+
+/* How to Buy Section */
+.how-to-buy {
+    background: #000000;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.how-to-buy h2 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 30px;
+}
+
+.buy-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.buy-step {
+    background: #000000;
+    padding: 20px;
+    border-radius: 15%;
+    /* Creates a slightly rounded, unique shape */
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.buy-step:hover {
+    transform: scale(1.05);
+}
+
+.buy-step img {
+    width: 100px;
+    /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%;
+    /* Makes the image circular */
+    object-fit: cover;
+    /* Ensures the image fits properly */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Adds subtle shadow for blending */
+    border: 2px solid #000000;
+    /* Matches background to blend */
+}
+
+.buy-step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+
+.buy-step p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+
+
+
+/* Contract Section */
+.contract-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.contract-box {
+    background: #000000;
+    /* Dark background */
+    border: 3px solid #ff0000;
+    /* Red border to match the glow */
+    border-radius: 50px;
+    /* Fully rounded corners */
+    padding: 20px 50px;
+    /* Increased padding for width */
+    text-align: center;
+    max-width: 800px;
+    /* Wider box */
+    width: 100%;
+    /* Ensures it stretches across available space */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    /* Red glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contract-box:hover {
+    transform: scale(1.05);
+    /* Slight pop-out effect on hover */
+    box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+    /* More intense glow on hover */
+}
+
+.contract-label {
+    font-family: 'Staatliches', sans-serif;
+    /* Bold and clean font */
+    font-size: 1.5rem;
+    color: #ff0000;
+    /* Red text for the label */
+    margin-bottom: 15px;
+}
+
+.contract-address-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    border: none;
+    /* Remove inner border */
+    box-shadow: none;
+    /* No extra shadow for the inner box */
+    width: 100%;
+    /* Stretch to fill the contract box */
+}
+
+#contract-address-input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    /* Increased padding for better readability */
+    font-family: 'Courier New', monospace;
+    /* Monospace font for address */
+    font-size: 1.2rem;
+    color: #333;
+    /* Dark text for contrast */
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#contract-address-input:focus {
+    outline: none;
+    /* No focus outline */
+}
+
+#copy-address-btn {
+    background: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    /* No rounding for button */
+}
+
+#copy-address-btn:hover {
+    background: #ff0000;
+    /* Highlight red on hover */
+    color: #fff;
+    transform: scale(1.1);
+    /* Slight scale effect */
+}
+
+/* Style for Contract Address Title */
+.contract-label {
+    font-family: 'Bangers', cursive, Arial, sans-serif;
+    /* Apply Bangers font */
+    font-size: 1.8rem;
+    /* Adjust size for visibility */
+    color: #ff0000;
+    /* Optional: Red color for emphasis */
+    text-align: center;
+    /* Center align the text */
+    margin-bottom: 15px;
+    /* Add spacing below the title */
+    text-transform: uppercase;
+    /* Optional: Make the text uppercase */
+    letter-spacing: 0.05em;
+    /* Slight spacing for readability */
+}
+
+/* Background video */
+.background-video {
+    position: absolute;
+    /* Positioned behind the text */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Place it behind the text */
+    filter: brightness(0.4);
+    /* Optional: Dim video for better text readability */
+}
+
+/* Hero Section Content (Text and Button) */
+.hero-content {
+    position: relative;
+    /* Ensure it stays within the hero container */
+    z-index: 10;
+    /* Higher than the video */
+    text-align: center;
+    /* Center the text */
+    color: #fff;
+    /* Ensure text is readable */
+    font-family: 'Rubik Distressed', Arial, sans-serif;
+    opacity: 1;
+    /* Ensure it is fully visible */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth transition */
+}
+
+/* Ensure parent container has no interference */
+.hero {
+    position: relative;
+    /* Create stacking context */
+    z-index: 0;
+    /* Neutral stacking context for parent */
+    display: flex;
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    height: 100vh;
+    /* Full height of the viewport */
+    overflow: hidden;
+    /* Prevent content overflow */
+}
+
+/* Animation classes */
+.hero-content.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Slide down */
+}
+
+.hero-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+    /* Reset to original position */
+}
+
+/* Debt Section Styling */
+.debt {
+    position: relative;
+    /* Ensure relative positioning for the section */
+    text-align: center;
+    background-color: #000000;
+    /* Match background color */
+    padding: 50px 0;
+    /* Add padding to the section */
+}
+
+.debt-container {
+    position: relative;
+    /* Relative positioning for the container */
+    display: inline-block;
+    /* Ensure content stays inline */
+}
+
+.debt-content {
+    display: inline-block;
+    /* Ensure the text stays inline */
+    margin: 0 100px;
+    /* Add spacing for the GIFs on either side */
+}
+
+/* GIF styles */
+.spinning-gif {
+    position: absolute;
+    width: 200px;
+    /* Increased size */
+    height: 200px;
+    /* Increased size */
+    z-index: 10;
+    /* Ensure it stays above the background */
+}
+
+.left-gif {
+    left: -220px;
+    /* Position the left GIF further left */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-gif {
+    right: -220px;
+    /* Position the right GIF further right */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    height: 100px;
+    /* Adjust as needed */
+    width: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Center the image if needed */
+    margin: 0 auto;
+    /* Optional: center within the parent div */
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Space out logo and icons */
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+    /* No background */
+}
+
+/* Navbar Icons */
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /* Space between icons */
+    list-style: none;
+    /* Remove bullets */
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo Styling */
+.meme-logo {
+    height: 60px;
+    /* Adjust size */
+    width: auto;
+    /* Keep aspect ratio */
+}
+
+/* Icon Styling (Circular Shape) */
+.nav-icons a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #fff;
+    /* White default color */
+    font-size: 1.5rem;
+    /* Adjust icon size */
+    width: 50px;
+    /* Fixed width for a circle */
+    height: 50px;
+    /* Fixed height for a circle */
+    background: #000;
+    /* Background color */
+    border: 2px solid #ff0000;
+    /* Red border */
+    border-radius: 50%;
+    /* Make it perfectly circular */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+    /* Smooth transitions */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icons img {
+    height: 24px;
+    /* Adjust height for consistency */
+    width: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Smooth hover effect */
+}
+
+/* Hover Effects for All Icons */
+.nav-icons a:hover,
+.nav-icons img:hover {
+    transform: scale(1.1);
+    /* Slight zoom */
+    background: #ff0000;
+    /* Red background on hover */
+    color: #fff;
+    /* White text on hover */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    /* Red glow effect */
+}
+
+/* BUY $ETF Button */
+.buy-etf a {
+    display: inline-block;
+    padding: 20px 40px;
+    /* Increase padding for a larger pill shape */
+    background: #000;
+    /* Black background */
+    color: #fff;
+    /* White text */
+    border: 3px solid #ff0000;
+    /* Slightly thicker red border */
+    border-radius: 50px;
+    /* Fully rounded edges for pill shape */
+    font-family: 'Rubik Distressed', Arial, sans-serif;
+    /* Match site font */
+    font-size: 1.5rem;
+    /* Increased font size for better fit */
+    font-weight: bold;
+    /* Bold text */
+    text-align: center;
+    /* Center the text horizontally */
+    line-height: 1;
+    /* Reduce line height to center text vertically */
+    text-decoration: none;
+    /* Remove underline */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+    /* Smooth transitions */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    width: 160px;
+    /* Increased width for larger button */
+    height: 60px;
+    /* Increased height to match proportions */
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+/* Hover Effect */
+.buy-etf a:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    background: #ff0000;
+    /* Change background to red */
+    color: #000;
+    /* Black text on hover */
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+    /* More intense red glow */
+}
+
+/* Navbar Alignment for Button */
+.nav-icons .buy-etf {
+    margin-left: 25px;
+    /* Slightly increased spacing between button and icons */
+}
+
+/* Circular Dex Screener Logo Container */
+.dex-logo-circular-container {
+    position: absolute;
+    /* Position relative to the navbar */
+    top: 50%;
+    /* Center vertically */
+    left: 20%;
+    /* Adjust the horizontal position */
+    transform: translate(-50%, -50%);
+    /* Center the logo relative to its position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* Ensure it appears above other elements */
+}
+
+/* Circular Dex Screener Logo */
+.dex-logo-circular {
+    height: 50px;
+    /* Same height as other circular icons */
+    width: 50px;
+    /* Same width as other circular icons */
+    background: #000;
+    /* Black background for the circular shape */
+    border: 2px solid #ff0000;
+    /* Red border */
+    border-radius: 50%;
+    /* Makes the logo circular */
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    /* Smooth transitions */
+}
+
+/* Dex Screener Logo Inside the Circle */
+.dex-logo-circular img {
+    height: 24px;
+    /* Same size as other logo images */
+    width: auto;
+    /* Maintain aspect ratio */
+    transition: none;
+    /* Disable additional hover effects on the image */
+}
+
+/* Hover Effects for the Circular Dex Screener Logo */
+.dex-logo-circular:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    background: #ff0000;
+    /* Red background on hover */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    /* Red glow effect */
+}
+
+/* Adjust Parent Container for Alignment */
+.dex-logo-circular-container {
+    position: absolute;
+    /* Position relative to the navbar */
+    top: 50%;
+    /* Center vertically */
+    left: 20%;
+    /* Adjust the horizontal position */
+    transform: translate(-50%, -50%);
+    /* Center container relative to position */
+    display: flex;
+    /* Flexbox for horizontal alignment */
+    gap: 15px;
+    /* Space between logos */
+    align-items: center;
+    z-index: 10;
+    /* Ensure it appears above other elements */
+}
+
+/* Circular SolScan Logo */
+.solscan-logo-circular {
+    height: 50px;
+    /* Same size as other circular icons */
+    width: 50px;
+    /* Same size as other circular icons */
+    background: #000;
+    /* Black background for the circular shape */
+    border: 2px solid #ff0000;
+    /* Red border */
+    border-radius: 50%;
+    /* Makes the logo circular */
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    /* Smooth transitions */
+}
+
+/* SolScan Logo Inside the Circle */
+.solscan-logo-circular img {
+    height: 24px;
+    /* Same size as other logo images */
+    width: auto;
+    /* Maintain aspect ratio */
+    transition: none;
+    /* Disable additional hover effects on the image */
+}
+
+/* Hover Effects for the Circular SolScan Logo */
+.solscan-logo-circular:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    background: #ff0000;
+    /* Red background on hover */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    /* Red glow effect */
+}
+
+/* Circular Raydium Logo Container */
+.raydium-logo-circular {
+    height: 50px;
+    /* Same size as other circular icons */
+    width: 50px;
+    /* Same size as other circular icons */
+    background: #000;
+    /* Black background for the circular shape */
+    border: 2px solid #ff0000;
+    /* Red border */
+    border-radius: 50%;
+    /* Makes the container circular */
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    /* Smooth transitions */
+}
+
+/* Raydium Logo Inside the Circle */
+.raydium-logo-circular img {
+    height: 30px;
+    /* Slightly bigger than before */
+    width: 30px;
+    /* Maintain proportional scaling */
+    object-fit: cover;
+    /* Ensures the image fits within the circle */
+    border-radius: 50%;
+    /* Ensures the logo remains circular */
+    background: #000;
+    /* Black background to match the container */
+    transition: none;
+    /* Disable additional hover effects on the image */
+}
+
+/* Hover Effects for the Circular Raydium Logo */
+.raydium-logo-circular:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    background: #ff0000;
+    /* Red background on hover */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    /* Red glow effect */
+}
+
+.milestone-text {
+    position: absolute;
+    font-family: 'Rubik Distressed', Arial, sans-serif;
+    /* Match site font */
+    font-size: 1rem;
+    /* Adjust text size */
+    color: #ff0000;
+    /* Red text color */
+    text-align: center;
+    /* Center the text above the dot */
+    background: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent background for better visibility */
+    padding: 5px 10px;
+    /* Add some padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    /* Subtle glow effect */
+    z-index: 20;
+    /* Ensure it appears above other elements */
+}
+
+.relative-container {
+    position: relative;
+    /* Enables absolute positioning within the container */
+}
+
+.milestone-text {
+    position: absolute;
+    /* Position relative to the container */
+    font-family: 'Rubik Distressed', Arial, sans-serif;
+    font-size: 1rem;
+    color: #ff0000;
+    /* Red text color */
+    background: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    text-align: center;
+    transform: translate(-50%, -50%);
+    /* Center alignment */
+}
+
+/* Recent Posts Section */
+.recent-posts {
+    padding: 60px 20px;
+    text-align: center;
+    background: #000000;
+}
+
+.recent-posts h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Tweets Grid Styling */
+.tweets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive columns */
+    gap: 20px;
+    /* Spacing between tweets */
+    justify-items: center;
+    /* Center tweets horizontally */
+}
+
+/* Individual Tweet Container */
+.tweet-container {
+    max-width: 300px;
+    /* Limit width for each tweet */
+    padding: 10px;
+    background: #000;
+    /* Black background for each container */
+    border-radius: 20px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    /* Subtle red glow */
+}
+
+/* Embedded Tweet Styling */
+.twitter-tweet {
+    margin: 0 auto !important;
+    /* Center the tweet */
+}
+
+.twitter-tweet iframe {
+    border-radius: 15px !important;
+    /* Round iframe corners */
+}
+
+/* Merch Section */
+.merch {
+    padding: 60px 20px;
+    text-align: center;
+    background: #000000;
+    /* Black background */
+}
+
+.merch h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.merch p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.merch-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    /* Space between image and details */
+    flex-wrap: wrap;
+    /* Responsive for smaller screens */
+}
+
+/* Larger Merch Image */
+.merch-image-container {
+    flex: 1;
+    /* Equal proportion for image and text */
+    text-align: center;
+}
+
+.merch-image {
+    max-width: 60%;
+    /* Slightly larger than previous */
+    height: auto;
+    border-radius: 15px;
+    /* Rounded edges for the image */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    /* Subtle red glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.merch-image:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+    /* Intense glow on hover */
+}
+
+/* Features and Details */
+.merch-details {
+    flex: 1;
+    /* Equal proportion for the text section */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.features-list li {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    /* Align icon and text properly */
+    gap: 15px;
+    /* Space between icon and text */
+}
+
+.features-list li p {
+    margin: 0;
+    /* Remove default paragraph margin */
+    line-height: 1.4;
+    /* Adjust line height */
+    font-size: 1.1rem;
+    /* Slightly smaller font */
+    color: #fff;
+    /* White text */
+}
+
+.features-list i {
+    font-size: 1.8rem;
+    /* Bigger icons */
+    color: #ff0000;
+    /* Red icons */
+}
+
+.merch-btn {
+    background: #ff0000;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    /* Glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.merch-btn:hover {
+    transform: scale(1.1);
+    /* Slight zoom */
+    background: #b30000;
+    /* Darker red */
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+    /* Intense glow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .merch-content {
+        flex-direction: column;
+        /* Stack image and details */
+    }
+
+    .merch-image-container,
+    .merch-details {
+        flex: 1;
+        /* Equal space on smaller screens */
+    }
+
+    .merch-image {
+        max-width: 80%;
+        /* Adjust size for smaller screens */
+    }
+}
+
+/* Tokenomics Section */
+.tokenomics {
+    padding: 60px 20px;
+    text-align: center;
+    background: #000000;
+    /* Match website theme */
+    color: #fff;
+    /* White text */
+}
+
+.tokenomics h2 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    /* Red heading color */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+}
+
+/* Content Flexbox */
+.tokenomics-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Image Styling */
+.tokenomics-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.tokenomics-image {
+    max-width: 50%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+    /* Floating animation */
+}
+
+/* Animation Keyframes */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Details Styling */
+.tokenomics-details {
+    flex: 1;
+    text-align: left;
+}
+
+/* List Styling */
+.tokenomics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tokenomics-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    /* Larger font size for emphasis */
+    margin-bottom: 20px;
+    padding: 15px;
+    /* Add padding inside each item */
+    border: 2px solid #ff0000;
+    /* Red border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    /* Subtle red glow */
+    background: #111;
+    /* Dark background inside the border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content;
+    /* Auto-size based on content */
+}
+
+.tokenomics-list li:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    /* Intense glow on hover */
+}
+
+/* Icon Styling */
+.tokenomics-list i {
+    font-size: 2rem;
+    color: #ff0000;
+    /* Red icons */
+}
+
+/* Text Styling */
+.tokenomics-list p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Solana Icon */
+.solana-icon {
+    width: 30px;
+    /* Icon size */
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tokenomics-content {
+        flex-direction: column;
+        /* Stack image and details */
+    }
+
+    .tokenomics-image {
+        max-width: 80%;
+        /* Adjust image size for smaller screens */
+    }
+
+    .tokenomics-list li {
+        flex-direction: column;
+        /* Stack text and icon vertically */
+        text-align: center;
+    }
+}
+
+/* Highlighted Debt Supporting Text */
+.highlighted-debt-text {
+    font-size: 1.7rem;
+    /* Slightly larger than before */
+    font-weight: bold;
+    /* Make it stand out more */
+    line-height: 1.8;
+    /* Increase line spacing for better readability */
+    color: #ffffff;
+    /* White text */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    /* Subtle glow for visibility */
+    margin-top: 10px;
+    /* Add spacing above */
+    margin-bottom: 20px;
+    /* Add spacing below */
+    display: flex;
+    /* Ensure proper alignment of text and icon */
+    align-items: center;
+    /* Align the icon with text vertically */
+    justify-content: center;
+    /* Center the text */
+}
+
+
+/* Hide all other icons on smaller screens (mobile devices) */
+@media (max-width: 768px) {
+    .nav-icons li {
+        display: none;
+        /* Hide all icons by default */
+    }
+
+    /* Specifically show only the Telegram, X, and "Buy ETF" icons */
+    .nav-icons li:nth-child(2),
+    /* X Icon */
+    .nav-icons li:nth-child(3),
+    /* Telegram Icon */
+    .nav-icons .buy-etf {
+        display: inline-block;
+        /* Keep these visible */
+    }
+
+    /* Adjust the navbar for better alignment on mobile */
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        justify-content: space-between;
+        /* Space out visible items */
+        padding: 10px 20px;
+        /* Reduce padding for mobile */
+    }
+
+    .buy-etf a {
+        padding: 10px 20px;
+        /* Adjust button size for smaller screens */
+        font-size: 1rem;
+        /* Slightly smaller font */
+    }
+}
+
+/* Mobile View: Adjust Debt Section and Remove GIFs */
+@media (max-width: 768px) {
+
+    /* Debt Section Scaling */
+    .debt {
+        transform: scale(0.65);
+        /* Reduce size to 65% */
+        transform-origin: top center;
+        /* Scale proportionally from the top center */
+        padding: 20px 10px;
+        /* Reduce padding for compact view */
+    }
+
+    /* Debt Container Adjustments */
+    .debt-container {
+        max-width: 100%;
+        /* Ensure it fits within the screen width */
+        display: flex;
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center align the content */
+    }
+
+    /* Debt Title */
+    .debt-content h2 {
+        font-size: 1.2rem;
+        /* Smaller font size for the title */
+        margin-bottom: 10px;
+        /* Reduce spacing below the title */
+    }
+
+    /* Debt Amount */
+    .highlighted-debt {
+        font-size: 1.5rem;
+        /* Adjust the font size for the debt amount */
+        line-height: 1.2;
+        /* Maintain line spacing */
+    }
+
+    /* Supporting Text */
+    .highlighted-debt-text {
+        font-size: 1rem;
+        /* Smaller font size for better fit */
+        line-height: 1.4;
+        /* Adjust line spacing */
+        padding: 0 10px;
+        /* Add horizontal padding for readability */
+        text-align: center;
+        /* Center align the text */
+    }
+
+    /* Remove GIFs */
+    .spinning-gif {
+        display: none;
+        /* Hide GIFs on mobile */
+    }
+}
+
+/* Extra Small Screens (e.g., Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .debt {
+        transform: scale(0.55);
+        /* Reduce size further to 55% for smaller screens */
+    }
+
+    /* Further Adjustments for Tiny Screens */
+    .debt-content h2 {
+        font-size: 1rem;
+        /* Further reduce title size */
+    }
+
+    .highlighted-debt {
+        font-size: 1.2rem;
+        /* Scale down the debt amount */
+    }
+
+    .highlighted-debt-text {
+        font-size: 0.9rem;
+        /* Make supporting text even smaller */
+    }
+}
+
+.copy-btn {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.copy-btn:hover {
+    background-color: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+}
+
+.copy-btn i {
+    font-size: 1.2rem;
+}
